@@ -76,3 +76,9 @@ else {
  * @deprecated You MUST use `IProductService` if possible.
  */
 export default product;
+
+export const defaultSettings: any = {
+	// ...outras configurações...
+	"files.defaultLanguage": "fountain"
+  };
+

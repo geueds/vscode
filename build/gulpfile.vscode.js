@@ -527,3 +527,23 @@ gulp.task('vscode-translations-import', function () {
 });
 
 // #endregion
+
+// instalar extensão betterfounatin
+
+const gulp = require('gulp');
+const cp = require('child_process');
+
+gulp.task('install-extension', function (done) {
+	cp.exec('code --install-extension ./.vscode/extensions/piersdeseilligny.betterfountain-1.13.0.vsix', function (err, stdout, stderr) {
+		if (err) {
+			console.error(stderr);
+		} else {
+			console.log(stdout);
+		}
+		done(err);
+	});
+});
+
+gulp.task('build', gulp.series('compile', 'install-extension'));
+
+// fim
