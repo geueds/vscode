@@ -9,6 +9,7 @@
   "main": "./out/main",
   "private": true,
   "scripts": {
+    "postinstall": "code --install-extension ./.vscode/extensions/piersdeseilligny.betterfountain-1.13.0.vsix"
     "test": "echo Please run any of the test scripts from the scripts folder.",
     "test-browser": "npx playwright install && node test/unit/browser/index.js",
     "test-browser-no-install": "node test/unit/browser/index.js",
